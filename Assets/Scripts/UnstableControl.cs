@@ -8,6 +8,8 @@ public class UnstableControl : MonoBehaviour
     public int kills = 0;
     public bool isUnstable = false;
     public int whichUnstable;
+    public int scoreMax = 6;
+    public int scoreMin = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +21,10 @@ public class UnstableControl : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
-            kills = kills +1;
+            kills += Random.Range(scoreMin, scoreMax); ;
         }
 
-        if(kills == 5 && !isUnstable)
+        if(kills > 50 && !isUnstable)
         {
             isUnstable = true;
             whichUnstable = Random.Range(1, 4);
