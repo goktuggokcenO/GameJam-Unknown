@@ -367,7 +367,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -744,10 +744,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7075703892613361180, guid: 03e7697b2b1bfbf46894e807a5643652, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7075703892613361180, guid: 03e7697b2b1bfbf46894e807a5643652, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194642289031346928, guid: 03e7697b2b1bfbf46894e807a5643652, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7194642289031346928, guid: 03e7697b2b1bfbf46894e807a5643652, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0a18adf4b330ba14fb027e7f96832019, type: 3}
+      objectReference: {fileID: 21300000, guid: 587bc01c567ee2b409e47731d5ddb177, type: 3}
     - target: {fileID: 7194642289031346928, guid: 03e7697b2b1bfbf46894e807a5643652, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -758,6 +770,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7194642289031346928, guid: 03e7697b2b1bfbf46894e807a5643652, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194642289031346928, guid: 03e7697b2b1bfbf46894e807a5643652, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8891730777005111416, guid: 03e7697b2b1bfbf46894e807a5643652, type: 3}
