@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour
 {
     // Veriables
     private float distance;
-
+    public Rigidbody2D rb;
     public GameObject player;
     public float speed;
     public float detectionRange;
@@ -24,8 +24,12 @@ public class EnemyAI : MonoBehaviour
 
         if(distance < detectionRange)
         {
+            rb.bodyType = RigidbodyType2D.Dynamic;
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+        } else
+        {
+            rb.bodyType = RigidbodyType2D.Static;
         }
     }
 }
