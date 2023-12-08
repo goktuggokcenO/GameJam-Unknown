@@ -13,8 +13,6 @@ public class Movement : MonoBehaviour
     float horizontal;
 
     public float moveSpeed;
-    public float speedLimit = 0.5f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -31,12 +29,6 @@ public class Movement : MonoBehaviour
     // Fixed update for the character movement
     void FixedUpdate()
     {
-        if (horizontal != 0 && vertical != 0)
-        {
-            horizontal *= speedLimit;
-            vertical *= speedLimit;
-        }
-
-        rb.velocity = new Vector2(horizontal * moveSpeed, vertical * moveSpeed);
+        rb.velocity = new Vector2(horizontal * moveSpeed * Time.deltaTime, vertical * moveSpeed * Time.deltaTime).normalized;
     }
 }
