@@ -8,16 +8,11 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     // Veriables
+    private float distance;
+
     public GameObject player;
     public float speed;
-    public float distance;
     public float detectionRange;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
