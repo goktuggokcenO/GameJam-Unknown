@@ -6,17 +6,23 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public static int scoreValue = 0;
+    public Text scoreText;
 
-    Text score;
-
-    void Statrt()
+    void Start()
     {
-        score = GetComponent<Text>();
+        UpdateScoreText();
     }
 
-    void Update()
+    void UpdateScoreText()
     {
-        score.text = "Score: "+ scoreValue;
+        scoreText.text = "Score: "+ scoreValue.ToString();
+    }
+
+    //when enemy died score will increase by 10
+    public void KillEnemy()
+    {
+        scoreValue += 10;
+        UpdateScoreText();
     }
 
 }
