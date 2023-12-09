@@ -16,6 +16,8 @@ public class Movement : MonoBehaviour
     public Animator animator;
     public float moveSpeed;
     public float speedLimit = 0.5f;
+    public GameObject playerModel;
+    public GameObject armModel;
 
     // Start is called before the first frame update
     void Start()
@@ -28,29 +30,20 @@ public class Movement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        Vector3 currentMousePosition = Input.mousePosition;
+        Vector3 currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         animator.SetFloat("speed", Math.Abs(horizontal + vertical));
-        if (horizontal > 0)
-        {
-            gameObject.transform.localScale = new Vector3(1, 1, 1);
-        }
-        if (horizontal < 0)
-        {
-            gameObject.transform.localScale = new Vector3(-1, 1, 1);
-        }
-   
-        if (currentMousePosition.x > lastMousePosition.x)
-        {
-            // Mouse saða hareket etti
-            gameObject.transform.localScale = new Vector3(1, 1, 1);
-        }
-        else if (currentMousePosition.x < lastMousePosition.x)
-        {
-            // Mouse sola hareket etti
-            gameObject.transform.localScale = new Vector3(-1, 1, 1);
-        }
 
-        lastMousePosition = currentMousePosition;
+   
+        if (currentMousePosition.x > gameObject.transform.position.x)
+        {
+            playerModel.transform.localScale = new Vector3(1, 1, 1);
+            armModel.transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (currentMousePosition.x < gameObject.transform.position.x)
+        {
+            playerModel.transform.localScale = new Vector3(-1, 1, 1);
+            armModel.transform.localScale = new Vector3(1, -1, 1);
+        }
     }
 
     // Fixed update for the character movement
