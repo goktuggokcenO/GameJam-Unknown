@@ -30,7 +30,7 @@ public class Movement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         Vector3 currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        animator.SetFloat("speed", Math.Abs(horizontal + vertical));
+        animator.SetFloat("speed", Math.Abs(horizontal) + Math.Abs(vertical));
 
         if (currentMousePosition.x > gameObject.transform.position.x)
         {
