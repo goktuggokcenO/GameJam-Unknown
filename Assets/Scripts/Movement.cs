@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     public float speedLimit = 0.5f;
     public GameObject playerSprite;
     public GameObject armSprite;
+    private bool isControlEnabled = true;
 
     // Start is called before the first frame update
     void Start()
@@ -27,24 +28,25 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
-        Vector3 currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        animator.SetFloat("speed", Math.Abs(horizontal) + Math.Abs(vertical));
+        if (isControlEnabled)
+        {
+            horizontal = Input.GetAxisRaw("Horizontal");
+            vertical = Input.GetAxisRaw("Vertical");
+            Vector3 currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            animator.SetFloat("speed", Math.Abs(horizontal) + Math.Abs(vertical));
 
-        if (currentMousePosition.x > gameObject.transform.position.x)
-        {
-            playerSprite.transform.localScale = new Vector3(1, 1, 1);
-            armSprite.transform.localScale = new Vector3(1, 1, 1);
-        }
-        else if (currentMousePosition.x < gameObject.transform.position.x)
-        {
-            playerSprite.transform.localScale = new Vector3(-1, 1, 1);
-            armSprite.transform.localScale = new Vector3(1, -1, 1);
+            if (currentMousePosition.x > gameObject.transform.position.x)
+            {
+                playerSprite.transform.localScale = new Vector3(1, 1, 1);
+                armSprite.transform.localScale = new Vector3(1, 1, 1);
+            }
+            else if (currentMousePosition.x < gameObject.transform.position.x)
+            {
+                playerSprite.transform.localScale = new Vector3(-1, 1, 1);
+                armSprite.transform.localScale = new Vector3(1, -1, 1);
+            }
         }
     }
-
-    // Fixed update for the character movement
     void FixedUpdate()
     {
         if (horizontal != 0 && vertical != 0)
@@ -55,4 +57,13 @@ public class Movement : MonoBehaviour
 
         rb.velocity = new Vector2(horizontal * moveSpeed, vertical * moveSpeed);
     }
+    public void OnEnable()
+    {
+        isControlEnabled = true;
+    }
+    public void DisableControl()
+    {
+        isControlEnabled = false;
+    }
+   
 }
