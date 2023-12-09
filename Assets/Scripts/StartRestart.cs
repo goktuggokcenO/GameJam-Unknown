@@ -7,6 +7,6 @@ public class StartRestart : MonoBehaviour
 {
   public void StartGame()
     {
-        SceneManager.LoadSceneAsync("TestScene");
+        SceneManager.LoadSceneAsync("CityMap");
     }
 }
