@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnstableWalk : MonoBehaviour
 {
-    public Movement playerController;
+    public PlayerMovement playerController;
     public float disableControlTime = 10f;
     public Transform[] randomPoints;
     public UnstableControl unstableControl;
