@@ -13,6 +13,7 @@ public class EnemyAI : MonoBehaviour
     public GameObject player;
     public float speed;
     public float detectionRange;
+    public Animator animator;
 
     // Update is called once per frame
     void Update()
@@ -36,9 +37,11 @@ public class EnemyAI : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Dynamic;
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
             //transform.rotation = Quaternion.Euler(Vector3.forward * angle); //rotate alýp dönmesin diye aþaðý yukarý
+            animator.SetBool("isIdle", false);
         } else
         {
             rb.bodyType = RigidbodyType2D.Static;
+            animator.SetBool("isIdle", true);
         }
     }
 }

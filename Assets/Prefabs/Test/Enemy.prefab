@@ -179,6 +179,7 @@ MonoBehaviour:
   player: {fileID: 0}
   speed: 1
   detectionRange: 5
+  animator: {fileID: 3241453822301106583}
 --- !u!114 &-980013438958932188
 MonoBehaviour:
   m_ObjectHideFlags: 0
