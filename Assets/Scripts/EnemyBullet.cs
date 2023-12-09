@@ -44,11 +44,11 @@ public class EnemyBullet : MonoBehaviour
     }
 
     // Destroy the bullet when colliding with player
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //other.gameObject.GetComponent<AttributesManager>().Health;
+            other.gameObject.GetComponent<AttributesManager>().health -= 20;
             Destroy(gameObject);
         }
     }
