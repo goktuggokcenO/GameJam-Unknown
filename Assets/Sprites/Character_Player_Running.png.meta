@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 31f6641312153fc4f806c342c67925d4
+guid: fb454ecbaaf733641a3cdc96ce96a729
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Weapon_Pistol_0
+      name: Character_Player_Running_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
-        width: 24
-        height: 24
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9098360043e3f9347a35024cd4a1d763
-      internalID: 340255919
+      spriteID: f77bc968e455b074db67963b6d0a5abd
+      internalID: 536439682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Pistol_1
+      name: Character_Player_Running_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 48
-        width: 24
-        height: 24
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e02bbd596cb67b4dbaa687a348b6fd1
-      internalID: -1762075074
+      spriteID: c0ffc263921af104bafa5a03a7b338a2
+      internalID: 536491048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Pistol_2
+      name: Character_Player_Running_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4562219f5367d48bcc072441104db3
+      internalID: -2071355814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Player_Running_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 24
-        width: 24
-        height: 24
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b0a8ea0c3c953b4fbf1a2d02c0e57bb
-      internalID: 1734047011
+      spriteID: ec701d1a85b6d9a44aadbbfcd9679de7
+      internalID: 1476545495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Pistol_3
+      name: Character_Player_Running_4
       rect:
         serializedVersion: 2
-        x: 24
-        y: 24
-        width: 24
-        height: 24
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +208,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63d66f31be3b8134f808c3f64bbd4444
-      internalID: -619240334
+      spriteID: 9f7689775c7147e4e99db2cabccda8e6
+      internalID: 1662320941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Pistol_4
+      name: Character_Player_Running_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8193a9a65900a48b2c240d55c29475
+      internalID: 1140880942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Player_Running_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 24
-        height: 24
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +250,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01f493462d270794e9db06ab59067a30
-      internalID: -658993887
+      spriteID: 72bc597cd464cbd48a7e6c435d239ece
+      internalID: 806581195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Player_Running_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2ecab2e70187d4e80b4b61a55df4a1
+      internalID: 1048191162
       vertices: []
       indices: 
       edges: []
@@ -225,11 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Weapon_Pistol_0: 340255919
-      Weapon_Pistol_1: -1762075074
-      Weapon_Pistol_2: 1734047011
-      Weapon_Pistol_3: -619240334
-      Weapon_Pistol_4: -658993887
+      Character_Player_Running_0: 536439682
+      Character_Player_Running_1: 536491048
+      Character_Player_Running_2: -2071355814
+      Character_Player_Running_3: 1476545495
+      Character_Player_Running_4: 1662320941
+      Character_Player_Running_5: 1140880942
+      Character_Player_Running_6: 806581195
+      Character_Player_Running_7: 1048191162
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
