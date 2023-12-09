@@ -842,6 +842,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2468873418558285422, guid: 03e7697b2b1bfbf46894e807a5643652, type: 3}
+      propertyPath: m_Name
+      value: Crosshair
+      objectReference: {fileID: 0}
     - target: {fileID: 3732521516824810590, guid: 03e7697b2b1bfbf46894e807a5643652, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1099999
