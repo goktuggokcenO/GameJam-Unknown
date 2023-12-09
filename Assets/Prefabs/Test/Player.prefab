@@ -812,6 +812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6936075544203286113}
   - component: {fileID: 1665893448231106471}
+  - component: {fileID: 7187980142893811346}
   m_Layer: 0
   m_Name: BulletTransform
   m_TagString: Untagged
@@ -886,6 +887,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7187980142893811346
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8264328590831543794}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 76805a9a89a2faa41b27cb405d1f945d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8444144403732847337
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,3 +958,4 @@ MonoBehaviour:
   bulletTransform: {fileID: 6017962224280179152}
   canFire: 1
   timeBetweenFireing: 0.3
+  animator: {fileID: 7187980142893811346}

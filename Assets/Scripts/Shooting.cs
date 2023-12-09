@@ -12,8 +12,9 @@ public class Shooting : MonoBehaviour
     public GameObject bullet;
     public Transform bulletTransform;
     public bool canFire = true;
+    public bool animateFire = false;
     public float timeBetweenFireing;
-
+    public Animator animator;
     private Camera mainCam;
     private Vector3 mousePos;
     private float timer;
@@ -32,6 +33,7 @@ public class Shooting : MonoBehaviour
         Vector3 rotation = mousePos - transform.position;
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
+ 
     
         // Check the player can fire or not
         if (canFire == false)
@@ -47,6 +49,7 @@ public class Shooting : MonoBehaviour
         // Spawn the bullet object
         if (Input.GetMouseButton(0) && canFire)
         {
+            animator.SetTrigger("isFiring");
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
         }
