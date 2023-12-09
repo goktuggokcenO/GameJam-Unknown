@@ -6,7 +6,7 @@ using UnityEngine;
 using System;
 
 // Player controller
-public class Movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     // Veriables
     private Rigidbody2D rb;
