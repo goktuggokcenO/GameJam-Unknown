@@ -40,7 +40,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2680248758414641696}
-  - component: {fileID: 7905949926252173270}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -69,19 +68,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7905949926252173270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066842194908818606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c2d98d3d75e974da2952884ddda0af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBarSprite: {fileID: 3977478666289415220}
 --- !u!1 &3607195715686921359
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +567,7 @@ GameObject:
   - component: {fileID: 9179576676715705266}
   - component: {fileID: 7061397264506679325}
   - component: {fileID: 361584812392109789}
-  - component: {fileID: -5646306996204711999}
+  - component: {fileID: 1428806523732401247}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -665,7 +651,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -715,7 +701,7 @@ MonoBehaviour:
   whichUnstable: 0
   scoreMax: 6
   scoreMin: 3
---- !u!114 &-5646306996204711999
+--- !u!114 &1428806523732401247
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -724,12 +710,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7984787662062639669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aef3b21b002d2484a97e70816b7c2562, type: 3}
+  m_Script: {fileID: 11500000, guid: 22b4a0cbf1571c4478f11411175b9afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  attack: 10
-  healthBar: {fileID: 7905949926252173270}
+  maxHealth: 100
+  helthBar: {fileID: 3977478666289415220}
 --- !u!1 &8264328590831543794
 GameObject:
   m_ObjectHideFlags: 0

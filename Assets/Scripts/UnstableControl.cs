@@ -8,8 +8,8 @@ public class UnstableControl : MonoBehaviour
     public int kills = 0;
     public bool isUnstable = false;
     public int whichUnstable;
-    public int scoreMax = 6;
-    public int scoreMin = 3;
+    public int scoreMax = 100;
+    public int scoreMin = 0;
     // Start is called before the first frame update
     void Start()
     {

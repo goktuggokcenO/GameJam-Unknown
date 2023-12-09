@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8265169468938369560}
   - component: {fileID: 36376116245003737}
   - component: {fileID: 1235748848660853388}
-  - component: {fileID: -980013438958932188}
   - component: {fileID: 5165280651852695780}
+  - component: {fileID: 5067025072663576911}
   - component: {fileID: 3241453822301106583}
   m_Layer: 0
   m_Name: Enemy
@@ -175,26 +175,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9715a4c4d9b4ac4ca5af54ac9728746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 8265169468938369560}
   player: {fileID: 0}
+  rb: {fileID: 8265169468938369560}
   speed: 1
   detectionRange: 5
   animator: {fileID: 3241453822301106583}
---- !u!114 &-980013438958932188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3621795945852013184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aef3b21b002d2484a97e70816b7c2562, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
-  attack: 5
-  healthBar: {fileID: 0}
 --- !u!114 &5165280651852695780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +195,20 @@ MonoBehaviour:
   bullet: {fileID: 2549574445126505632, guid: cea2d63312aa13545a8cf6efd6ca6e76, type: 3}
   bulletPosition: {fileID: 7919156965328746834}
   enemyRange: 10
+--- !u!114 &5067025072663576911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3621795945852013184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d0c90fcaa15a554993be89ba3300e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
 --- !u!95 &3241453822301106583
 Animator:
   serializedVersion: 5

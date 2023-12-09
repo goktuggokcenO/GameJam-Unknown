@@ -5,12 +5,15 @@ using System.Collections.Generic;
 using System.Net.Sockets;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UIElements.Experimental;
 
 // Enemy bullet script
 public class EnemyBullet : MonoBehaviour
 {
     // Veriables
     public float force;
+    public int damage;
+    public PlayerHealth health;
 
     private GameObject player;
     private Rigidbody2D rb;
@@ -48,7 +51,7 @@ public class EnemyBullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<AttributesManager>().health -= 20;
+            other.gameObject.GetComponent<PlayerHealth>().health -= damage;
             Destroy(gameObject);
         }
     }
