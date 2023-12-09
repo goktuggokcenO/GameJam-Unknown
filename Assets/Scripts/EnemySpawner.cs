@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemy;
+    public GameObject player;
     private Transform spawnPosition;
     private int enemyNumberPerWave = 4;
     public int waveNumber = 0;
@@ -59,6 +60,7 @@ public class EnemySpawner : MonoBehaviour
         randomPoint = GetRandomPointInRectangularArea();
         spawnPosition = gameObject.transform;
         Instantiate(enemy, randomPoint, Quaternion.identity);
+        enemy.GetComponent<EnemyAI>().player = player;
         enemysAlive += 1;
     }
 
