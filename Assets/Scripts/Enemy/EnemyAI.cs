@@ -8,21 +8,24 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     // Veriables
-    private float distance;
-    public Rigidbody2D rb;
     public GameObject player;
+    public Rigidbody2D rb;
     public float speed;
     public float detectionRange;
     public Animator animator;
 
+    private float distance;
+
     // Update is called once per frame
     void Update()
     {
+        // Calculate the distance and direction
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         
+        // Change the direction of the enemy acorfing to the player.
         if (player.transform.position.x > gameObject.transform.position.x)
         {
             gameObject.transform.localScale = new Vector3(2, 2, 2);
@@ -32,13 +35,14 @@ public class EnemyAI : MonoBehaviour
             gameObject.transform.localScale = new Vector3(-2, 2, 2);
         }
 
+        // Move the enemy to the player
         if (distance < detectionRange)
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-            //transform.rotation = Quaternion.Euler(Vector3.forward * angle); //rotate alýp dönmesin diye aþaðý yukarý
             animator.SetBool("isIdle", false);
-        } else
+        }
+        else
         {
             rb.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isIdle", true);
