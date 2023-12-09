@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using System;
 
 // Player controller
 public class Movement : MonoBehaviour
@@ -12,7 +13,7 @@ public class Movement : MonoBehaviour
     float vertical;
     float horizontal;
     Vector3 lastMousePosition;
-
+    public Animator animator;
     public float moveSpeed;
     public float speedLimit = 0.5f;
 
@@ -28,7 +29,7 @@ public class Movement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         Vector3 currentMousePosition = Input.mousePosition;
-
+        animator.SetFloat("speed", Math.Abs(horizontal + vertical));
         if (horizontal > 0)
         {
             gameObject.transform.localScale = new Vector3(1, 1, 1);
