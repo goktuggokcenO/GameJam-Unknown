@@ -17,6 +17,11 @@ public class EnemyAI : MonoBehaviour
     private float distance;
 
     // Update is called once per frame
+
+    private void Start()
+    {
+        player = FindObjectOfType<PlayerMovement>().gameObject;    
+    }
     void Update()
     {
         // Calculate the distance and direction

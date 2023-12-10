@@ -5,78 +5,88 @@ using UnityEngine;
 
 public class UnstableControl : MonoBehaviour
 {
-    public int kills = 0;
     public bool isUnstable = false;
     public int whichUnstable;
     public int scoreMax = 100;
     public int scoreMin = 0;
+    private bool canBeUnstable = true;
+
+    public PlayerMovement playerMovement;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        canBeUnstable = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
+
+
+        if (isUnstable == false)
         {
-            kills += Random.Range(scoreMin, scoreMax); ;
+            if (Score.unstableCounter >= 50)
+            {
+                Score.unstableCounter = 0;
+                isUnstable = true;
+                whichUnstable = Random.Range(1, 1);
+                switch (whichUnstable)
+                {
+                    case 0: break;
+                    case 1:
+                        StartCoroutine(unstableWalk()); break;
+                    case 2:
+                        StartCoroutine(unstableBomb()); break;
+                    case 3:
+                        StartCoroutine(unstableDash()); break;
+                    case 4:
+                        StartCoroutine(unstableFiring()); break;
+                }
+
+            }
         }
 
-        if(kills > 50 && !isUnstable)
-        {
-            isUnstable = true;
-            whichUnstable = Random.Range(1, 4);
-        }
 
-        switch (whichUnstable) {
-            case 0: break;
-            case 1:
-                StartCoroutine(unstableWalk()); break;
-            case 2: 
-                StartCoroutine(unstableBomb()); break;
-            case 3:
-                StartCoroutine(unstableDash()); break;
-            case 4:
-                 StartCoroutine(unstableFiring()); break;    
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftAlt))
+        //{
+        //    kills += Random.Range(scoreMin, scoreMax); ;
+        //}
+
+
+
 
     }
 
     private IEnumerator unstableWalk()
     {
-        //Special Beahviour
+        Debug.Log("unstable walk");
+        playerMovement.DisableControl();
         yield return new WaitForSecondsRealtime(3);
+        playerMovement.EnableControl();
         isUnstable = false;
-        kills = 0;
         whichUnstable = 0;
+        
     }
 
     private IEnumerator unstableBomb()
     {
-        //Special Beahviour
+        Debug.Log("unstable bomb");
         yield return new WaitForSecondsRealtime(3);
-        isUnstable = false;
-        kills = 0;
-        whichUnstable = 0;
+
     }
 
     private IEnumerator unstableDash()
     {
-        //Special Beahviour
+        Debug.Log("unstable dash");
         yield return new WaitForSecondsRealtime(3);
-        isUnstable = false;
-        kills = 0;
-        whichUnstable = 0;
+
     }
 
     private IEnumerator unstableFiring()
     {
-        //Special Beahviour
+        Debug.Log("unstable firing");
         yield return new WaitForSecondsRealtime(3);
-        isUnstable = false;
-        kills = 0;
-        whichUnstable = 0;
+
     }
 }

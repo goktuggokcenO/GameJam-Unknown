@@ -20,7 +20,7 @@ public class UnstableWalk : MonoBehaviour
     {
         if(!controlDisabled)
         {
-            if(unstableControl.kills < 100)
+            if(Score.scoreValue < 100)
             {
                 DisablePlayerControl();
                 Invoke("EnablePlayerControl", disableControlTime);
@@ -38,7 +38,7 @@ public class UnstableWalk : MonoBehaviour
     }
     void EnablePlayerControl()
     {
-        playerController.OnEnable();
+        playerController.EnableControl();
         controlDisabled = false;
     }
     void MovePlayerToRandomPoint()

@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Stop the characer
-    public void OnEnable()
+    public void EnableControl()
     {
         isControlEnabled = true;
     }

@@ -9,11 +9,13 @@ public class EnemyHealth : MonoBehaviour
     // Veriables
     public float health;
     public float maxHealth;
+    public Score score;
 
     // Start is called before the first frame update
     void Start()
     {
         maxHealth = health;
+        score = FindObjectOfType<Score>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            score.KillEnemy();
         }
     }
 }
