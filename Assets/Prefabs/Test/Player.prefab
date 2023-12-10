@@ -684,8 +684,8 @@ MonoBehaviour:
   moveSpeed: 7
   speedLimit: 0.5
   animator: {fileID: 8729650009541265662}
-  dashDistance: 5
-  dashDuration: 1
+  dashDistance: 400
+  dashDuration: 0.2
   dashCooldown: 2
 --- !u!114 &361584812392109789
 MonoBehaviour:
@@ -699,11 +699,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39f738aa0216394eb20adb8e6f9d3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kills: 0
   isUnstable: 0
   whichUnstable: 0
   scoreMax: 6
   scoreMin: 3
+  playerMovement: {fileID: 0}
 --- !u!114 &1428806523732401247
 MonoBehaviour:
   m_ObjectHideFlags: 0

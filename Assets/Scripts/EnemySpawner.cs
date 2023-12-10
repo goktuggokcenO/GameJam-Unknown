@@ -15,6 +15,8 @@ public class EnemySpawner : MonoBehaviour
     public int waveNumber = 0;
     public int enemysAlive = 0;
     private bool isCountdownInProgress = false;
+    public bool isEnemyExists;
+
 
     public float countdownTime = 5f;
 
@@ -28,13 +30,19 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isEnemyExists = false;
         startWave(waveNumber);
-
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            isEnemyExists=true;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        isEnemyExists = false;
         if (enemysAlive < 1 && !isCountdownInProgress)
         {
             StartCoroutine(StartCountdown());
@@ -43,6 +51,18 @@ public class EnemySpawner : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) {
             enemysAlive--;
         }
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            isEnemyExists = true;
+        }
+
+        if (!isEnemyExists) 
+        {
+            startWave(waveNumber);
+        }
+
     }
 
     
@@ -94,6 +114,11 @@ public class EnemySpawner : MonoBehaviour
             spawnEnemy();
         }
         enemyNumberPerWave += 2;
+    }
+
+    public void enemyCounter()
+    {
+        enemysAlive--;
     }
 
     IEnumerator StartCountdown()

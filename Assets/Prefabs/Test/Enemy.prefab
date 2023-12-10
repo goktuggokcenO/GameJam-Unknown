@@ -179,7 +179,6 @@ MonoBehaviour:
   rb: {fileID: 0}
   speed: 1
   detectionRange: 5
-  animator: {fileID: 3241453822301106583}
 --- !u!114 &5165280651852695780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +209,8 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   score: {fileID: 0}
+  spawner: {fileID: 0}
+  enemySpawn: {fileID: 1788931180095357803, guid: cecec76dce268fb4d9d791d77d382728, type: 3}
 --- !u!95 &3241453822301106583
 Animator:
   serializedVersion: 5
