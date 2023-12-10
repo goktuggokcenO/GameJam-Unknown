@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartRestart : MonoBehaviour
+public class Start : MonoBehaviour
 {
   public void StartGame()
     {
-        SceneManager.LoadSceneAsync("CityMap");
+        SceneManager.LoadSceneAsync("CutScene1");
     }
 }
