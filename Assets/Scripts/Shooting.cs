@@ -18,6 +18,7 @@ public class Shooting : MonoBehaviour
     private Camera mainCam;
     private Vector3 mousePos;
     private float timer;
+    public AudioSource audioControl;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +51,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetMouseButton(0) && canFire)
         {
             animator.SetTrigger("isFiring");
+            audioControl.Play();
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
         }

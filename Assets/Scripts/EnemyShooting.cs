@@ -14,6 +14,8 @@ public class EnemyShooting : MonoBehaviour
     private float timer;
     private GameObject player;
 
+    public AudioSource audioControl;
+
     // Enemy shoot function
     void shoot()
     {
@@ -40,6 +42,7 @@ public class EnemyShooting : MonoBehaviour
             {
                 timer = 0;
                 shoot();
+                audioControl.Play();
             }
         }
     }
