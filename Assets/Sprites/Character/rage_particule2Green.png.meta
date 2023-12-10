@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bcbf68ad32af36d4a939e4ef6b48cfa5
+guid: c3b719e335d6fa141ab91a52a0030529
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rage_particule2_0
+      name: rage_particule2Green_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 492a6fcdddbeda94b92193821351f257
-      internalID: 1520227383
+      spriteID: 899a174e746e1ba47a1e3f01d264b357
+      internalID: 866060009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rage_particule2_1
+      name: rage_particule2Green_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b09fce6e307f6e40a9c72590b0b3023
-      internalID: -2048430591
+      spriteID: 8103ea13b00baa448be2703c14193128
+      internalID: -1307474910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rage_particule2_2
+      name: rage_particule2Green_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea8788ebac094824bba0177cd0f0f16e
-      internalID: -120052634
+      spriteID: 02ad7fa4625f0444daf0768cbb2a7d66
+      internalID: -1332932292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rage_particule2_3
+      name: rage_particule2Green_3
       rect:
         serializedVersion: 2
         x: 96
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 472e5a9af674b27458209db286d1a93d
-      internalID: 1818137578
+      spriteID: 6b4622f1d0f7a464a8915339cde3bdd5
+      internalID: 2104744613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rage_particule2_4
+      name: rage_particule2Green_4
       rect:
         serializedVersion: 2
         x: 128
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c4984835d9a1644f887e33198bee4f6
-      internalID: 22491974
+      spriteID: e3ed1baa4bae5f849b23f23c3ce26883
+      internalID: 968445428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rage_particule2_5
+      name: rage_particule2Green_5
       rect:
         serializedVersion: 2
         x: 160
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a002ee073d8d2cd46b8cf89357bf108c
-      internalID: -979699238
+      spriteID: 06fff37876f4bcb4b8e8f388de54ab88
+      internalID: -61536131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rage_particule2_6
+      name: rage_particule2Green_6
       rect:
         serializedVersion: 2
         x: 192
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cda00827c3343f468c74fc8d982e04e
-      internalID: 2082401781
+      spriteID: 5de7be2be9ed57243820da3e336e0100
+      internalID: -1075842637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rage_particule2_7
+      name: rage_particule2Green_7
       rect:
         serializedVersion: 2
         x: 224
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 898d99489ea156f4e9e521006996f60c
-      internalID: -2027898575
+      spriteID: 83758cbc6a38a3849906c84b0045d1a3
+      internalID: 210677875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rage_particule2_8
+      name: rage_particule2Green_8
       rect:
         serializedVersion: 2
         x: 256
@@ -292,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83f33c5961b5d7143ac8348e6f18bfe3
-      internalID: 1181018791
+      spriteID: 8f9ed0c5124ec924cb9862524a79fdda
+      internalID: 1476354977
       vertices: []
       indices: 
       edges: []
@@ -309,15 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      rage_particule2_0: 1520227383
-      rage_particule2_1: -2048430591
-      rage_particule2_2: -120052634
-      rage_particule2_3: 1818137578
-      rage_particule2_4: 22491974
-      rage_particule2_5: -979699238
-      rage_particule2_6: 2082401781
-      rage_particule2_7: -2027898575
-      rage_particule2_8: 1181018791
+      rage_particule2Green_0: 866060009
+      rage_particule2Green_1: -1307474910
+      rage_particule2Green_2: -1332932292
+      rage_particule2Green_3: 2104744613
+      rage_particule2Green_4: 968445428
+      rage_particule2Green_5: -61536131
+      rage_particule2Green_6: -1075842637
+      rage_particule2Green_7: 210677875
+      rage_particule2Green_8: 1476354977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
