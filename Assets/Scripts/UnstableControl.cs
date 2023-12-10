@@ -10,12 +10,14 @@ public class UnstableControl : MonoBehaviour
     public int scoreMax = 100;
     public int scoreMin = 0;
     private bool canBeUnstable = true;
+    public GameObject unstableControl; //unstable animation için
 
     public PlayerMovement playerMovement;
 
     // Start is called before the first frame update
     void Start()
     {
+        unstableControl.SetActive(false);
         canBeUnstable = false;
     }
 
@@ -60,8 +62,10 @@ public class UnstableControl : MonoBehaviour
     {
         Debug.Log("unstable walk");
         playerMovement.DisableControl();
+        unstableControl.SetActive(true);
         yield return new WaitForSecondsRealtime(3);
         playerMovement.EnableControl();
+        unstableControl.SetActive(false);
         isUnstable = false;
         whichUnstable = 0;
         
@@ -73,16 +77,19 @@ public class UnstableControl : MonoBehaviour
 
         Debug.Log("unstable dash");
         playerMovement.Dash(mousePosition);
+        unstableControl.SetActive(true);
         isUnstable = false;
         whichUnstable = 0;
         yield return new WaitForSecondsRealtime(0.1f);
-       
+        unstableControl.SetActive(false);
+
     }
 
     private IEnumerator unstableFiring()
     {
+        unstableControl.SetActive(true);
         Debug.Log("unstable firing");
         yield return new WaitForSecondsRealtime(3);
-
+        unstableControl.SetActive(false);
     }
 }
