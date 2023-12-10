@@ -175,6 +175,7 @@ MonoBehaviour:
   force: 20
   destroyTime: 10
   damage: 20
+  health: {fileID: 0}
 --- !u!95 &503646843268981974
 Animator:
   serializedVersion: 5

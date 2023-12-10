@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public int whichEnemy;
     public GameObject enemy;
+    public GameObject enemy2;
+    public GameObject enemy3;
+    public GameObject enemy4;
     public GameObject player;
     private Transform spawnPosition;
     private int enemyNumberPerWave = 4;
@@ -12,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     public int enemysAlive = 0;
     private bool isCountdownInProgress = false;
 
-    public float countdownTime = 15f;
+    public float countdownTime = 5f;
 
     Vector3 topLeftCorner = new Vector3(10, 3, 0);
     Vector3 topRightCorner = new Vector3(40, 3, 0);
@@ -57,10 +61,28 @@ public class EnemySpawner : MonoBehaviour
 
     void spawnEnemy()
     {
+        whichEnemy = Random.Range(1, 5);
         randomPoint = GetRandomPointInRectangularArea();
         spawnPosition = gameObject.transform;
-        Instantiate(enemy, randomPoint, Quaternion.identity);
-        enemy.GetComponent<EnemyAI>().player = player;
+        switch (whichEnemy)
+        {
+            case 1:
+                Instantiate(enemy, randomPoint, Quaternion.identity);
+                enemy.GetComponent<EnemyAI>().player = player;
+                break;
+            case 2:
+                Instantiate(enemy2, randomPoint, Quaternion.identity);
+                enemy2.GetComponent<EnemyAI>().player = player;
+                break;
+            case 3:
+                Instantiate(enemy3, randomPoint, Quaternion.identity);
+                enemy3.GetComponent<EnemyAI>().player = player;
+                break;
+            case 4:
+                Instantiate(enemy4, randomPoint, Quaternion.identity);
+                enemy4.GetComponent<EnemyAI>().player = player;
+                break;
+        }
         enemysAlive += 1;
     }
 
@@ -85,7 +107,7 @@ public class EnemySpawner : MonoBehaviour
         startWave(waveNumber);
 
         // Reset the countdown time
-        countdownTime = 15f;
+        countdownTime = 5f;
 
         isCountdownInProgress = false;
     }

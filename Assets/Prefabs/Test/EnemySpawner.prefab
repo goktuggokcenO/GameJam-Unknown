@@ -44,4 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e4a939901d6084cbd8363565ab0fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whichEnemy: 0
   enemy: {fileID: 3621795945852013184, guid: b45e4f1a1e8e21a45b9925ff20767596, type: 3}
+  enemy2: {fileID: 3621795945852013184, guid: 752362afd8bf9ef438f4e1a0530ee75c, type: 3}
+  enemy3: {fileID: 3621795945852013184, guid: cada212f2eda2244fb753da0e6889d16, type: 3}
+  enemy4: {fileID: 3621795945852013184, guid: 013fe703f49d3da4f9aca330cf4e36ae, type: 3}
+  player: {fileID: 0}
+  waveNumber: 0
+  enemysAlive: 0
+  countdownTime: 5

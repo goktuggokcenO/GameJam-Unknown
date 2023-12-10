@@ -679,11 +679,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcd2be53541ab3429fe8cc7e2faca9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 8729650009541265662}
-  moveSpeed: 7
-  speedLimit: 0.5
   playerSprite: {fileID: 9145774203796743316}
   armSprite: {fileID: 8264328590831543794}
+  moveSpeed: 7
+  speedLimit: 0.5
+  animator: {fileID: 8729650009541265662}
+  dashDistance: 5
+  dashDuration: 1
+  dashCooldown: 2
 --- !u!114 &361584812392109789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,9 +716,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b4a0cbf1571c4478f11411175b9afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 10000
   maxHealth: 100
   helthBar: {fileID: 3977478666289415220}
+  gameOver: {fileID: 0}
 --- !u!1 &8264328590831543794
 GameObject:
   m_ObjectHideFlags: 0
