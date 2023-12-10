@@ -20,6 +20,8 @@ public class Shooting : MonoBehaviour
     private float timer;
     public AudioSource audioControl;
 
+    private bool isUnstableShoot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +50,7 @@ public class Shooting : MonoBehaviour
         }
 
         // Spawn the bullet object
-        if (Input.GetMouseButton(0) && canFire)
+        if (Input.GetMouseButton(0) && canFire && !isUnstableShoot)
         {
             animator.SetTrigger("isFiring");
             audioControl.Play();
