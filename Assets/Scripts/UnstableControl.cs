@@ -36,16 +36,15 @@ public class UnstableControl : MonoBehaviour
             {
                 Score.unstableCounter = 0;
                 isUnstable = true;
-                whichUnstable = Random.Range(1, 2);
+                whichUnstable = Random.Range(1, 3);
                 switch (whichUnstable)
                 {
                     case 0: break;
                     case 1:
-                       StartCoroutine(unstableDash()); break;
+                       StartCoroutine(unstableWalk()); break;
                     case 2:
                         StartCoroutine(unstableDash()); break;
-                    case 3:
-                        StartCoroutine(unstableFiring()); break;
+                    
                 }
 
             }
@@ -87,13 +86,5 @@ public class UnstableControl : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.1f);
         unstableControl3.SetActive(false);
 
-    }
-
-    private IEnumerator unstableFiring()
-    {
-        unstableControl.SetActive(true);
-        Debug.Log("unstable firing");
-        yield return new WaitForSecondsRealtime(3);
-        unstableControl.SetActive(false);
     }
 }
