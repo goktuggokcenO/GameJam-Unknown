@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    IEnumerator Dash(Vector3 targetPosition)
+    public IEnumerator Dash(Vector3 targetPosition)
     {
         isDashing = true;
 

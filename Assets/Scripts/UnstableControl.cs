@@ -30,17 +30,15 @@ public class UnstableControl : MonoBehaviour
             {
                 Score.unstableCounter = 0;
                 isUnstable = true;
-                whichUnstable = Random.Range(1, 1);
+                whichUnstable = Random.Range(1, 2);
                 switch (whichUnstable)
                 {
                     case 0: break;
                     case 1:
-                        StartCoroutine(unstableWalk()); break;
+                       StartCoroutine(unstableDash()); break;
                     case 2:
-                        StartCoroutine(unstableBomb()); break;
-                    case 3:
                         StartCoroutine(unstableDash()); break;
-                    case 4:
+                    case 3:
                         StartCoroutine(unstableFiring()); break;
                 }
 
@@ -69,18 +67,16 @@ public class UnstableControl : MonoBehaviour
         
     }
 
-    private IEnumerator unstableBomb()
-    {
-        Debug.Log("unstable bomb");
-        yield return new WaitForSecondsRealtime(3);
-
-    }
-
     private IEnumerator unstableDash()
     {
-        Debug.Log("unstable dash");
-        yield return new WaitForSecondsRealtime(3);
+        Vector3 mousePosition = new Vector3(1, 1, 1);
 
+        Debug.Log("unstable dash");
+        playerMovement.Dash(mousePosition);
+        isUnstable = false;
+        whichUnstable = 0;
+        yield return new WaitForSecondsRealtime(0.1f);
+       
     }
 
     private IEnumerator unstableFiring()
