@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6017962224280179152}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: RealBulletTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 6724986525140765239}
   - component: {fileID: 2329974987207852456}
   - component: {fileID: 1525201660601163375}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: UnstableEffect2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 320849519, guid: 8d2682fe00c04144183a97d7e9185a89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -146,7 +146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2680248758414641696}
-  m_Layer: 1
+  m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,6 +165,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1526250253288035856}
   - {fileID: 3995844829014007258}
   m_Father: {fileID: 8971618164790669211}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -184,7 +185,7 @@ GameObject:
   - component: {fileID: 3292216001357640850}
   - component: {fileID: 4143637742481156308}
   - component: {fileID: 721095129247740559}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: UnstableEffect3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +247,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 866060009, guid: c3b719e335d6fa141ab91a52a0030529, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -291,7 +292,7 @@ GameObject:
   - component: {fileID: 7208938319552174787}
   - component: {fileID: 3689455777387122182}
   - component: {fileID: 5711167209552008761}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: DashEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +375,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1601465835, guid: a5cbcf81c938d4945962512ba479d71d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -409,7 +410,7 @@ GameObject:
   - component: {fileID: 1526250253288035856}
   - component: {fileID: 1259209315679400607}
   - component: {fileID: 1261855287926973252}
-  m_Layer: 1
+  m_Layer: 5
   m_Name: HelthFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,14 +426,14 @@ RectTransform:
   m_GameObject: {fileID: 3607195715686921359}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 0.56338036, y: 8, z: 1}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3995844829014007258}
+  m_Father: {fileID: 2680248758414641696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00005351589, y: 0.00007828757}
+  m_AnchoredPosition: {x: -0.0010108948, y: 0.0001373291}
   m_SizeDelta: {x: 192.8721, y: 26.0255}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1259209315679400607
@@ -485,7 +486,7 @@ GameObject:
   - component: {fileID: 6230848088166803672}
   - component: {fileID: 1176111354501210221}
   - component: {fileID: 4102476272285212610}
-  m_Layer: 1
+  m_Layer: 5
   m_Name: PlayerStats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,7 +587,7 @@ GameObject:
   - component: {fileID: 3995844829014007258}
   - component: {fileID: 5098972557888751092}
   - component: {fileID: 3977478666289415220}
-  m_Layer: 1
+  m_Layer: 5
   m_Name: HelthFiller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,8 +605,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8875, y: 0.125, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1526250253288035856}
+  m_Children: []
   m_Father: {fileID: 2680248758414641696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 3935973443917001422}
   - component: {fileID: 4467779197038237199}
   - component: {fileID: 7754363652794473047}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +736,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: baec04d69675df541a34983ea2933350, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 3978526712749759984}
   - component: {fileID: 7530207482931154755}
   - component: {fileID: 1921653578638605959}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -896,7 +896,7 @@ GameObject:
   - component: {fileID: 7191905309037407126}
   - component: {fileID: 2913628053443899130}
   - component: {fileID: 9056751014561298398}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: UnstableEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -979,7 +979,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 1520227383, guid: bcbf68ad32af36d4a939e4ef6b48cfa5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1005,7 +1005,7 @@ GameObject:
   - component: {fileID: 7061397264506679325}
   - component: {fileID: 361584812392109789}
   - component: {fileID: 1428806523732401247}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1175,7 +1175,7 @@ GameObject:
   - component: {fileID: 6936075544203286113}
   - component: {fileID: 1665893448231106471}
   - component: {fileID: 7187980142893811346}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: BulletTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1281,7 +1281,7 @@ GameObject:
   - component: {fileID: 7124032329215432690}
   - component: {fileID: 1687600694750593525}
   - component: {fileID: 850739944953283785}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: RotatePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1431,7 +1431,7 @@ GameObject:
   - component: {fileID: 4482130459436443731}
   - component: {fileID: 6040371265468724099}
   - component: {fileID: 8729650009541265662}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1494,7 +1494,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -514171811, guid: b1886d222049f3941bebdf028f323bf1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
