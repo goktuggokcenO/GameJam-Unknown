@@ -33,11 +33,11 @@ public class EnemyAI : MonoBehaviour
         // Change the direction of the enemy acorfing to the player.
         if (player.transform.position.x > gameObject.transform.position.x)
         {
-            gameObject.transform.localScale = new Vector3(2, 2, 2);
+            gameObject.transform.localScale = new Vector3(3, 3, 3);
         }
         else if (player.transform.position.x < gameObject.transform.position.x)
         {
-            gameObject.transform.localScale = new Vector3(-2, 2, 2);
+            gameObject.transform.localScale = new Vector3(-3, 3, 3);
         }
 
         // Move the enemy to the player
