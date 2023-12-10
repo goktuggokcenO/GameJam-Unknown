@@ -7,6 +7,6 @@ public class CutScene : MonoBehaviour
 {
     public void goGame()
     {
-        SceneManager.LoadSceneAsync("CityMap");
+        SceneManager.LoadSceneAsync("city2");
     }
 }
