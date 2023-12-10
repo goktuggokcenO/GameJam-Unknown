@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float speedLimit = 0.5f;
     public Animator animator;
+    public GameObject DashAnim; //Dash animation için
 
     private bool isControlEnabled = true;
     private Rigidbody2D rb;
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DashAnim.SetActive(false);
         // Set rigidbody
         rb = GetComponent<Rigidbody2D>();
     }
@@ -72,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
     public IEnumerator Dash(Vector3 targetPosition)
     {
         isDashing = true;
-
+        DashAnim.SetActive(true);
         Vector3 startPosition = transform.position;
         float elapsedTime = 0f;
 
@@ -85,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = targetPosition;
         isDashing = false;
+        DashAnim.SetActive(false);
     }
 
 
