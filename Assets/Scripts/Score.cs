@@ -17,13 +17,10 @@ public class Score : MonoBehaviour
     // Update score text
     void UpdateScoreText()
     {
-<<<<<<< Updated upstream
         scoreText.text = "Score: "+ scoreValue.ToString();
         Debug.Log(scoreText.text);
         PlayerPrefs.SetInt("Score", scoreValue);
-=======
         scoreText.text = "Score: " + scoreValue.ToString();
->>>>>>> Stashed changes
     }
 
 

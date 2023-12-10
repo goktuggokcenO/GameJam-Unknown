@@ -78,12 +78,7 @@ public class PlayerMovement : MonoBehaviour
     public IEnumerator Dash(Vector3 targetPosition)
     {
         isDashing = true;
-<<<<<<< Updated upstream
         DashAnim.SetActive(true);
-=======
-
-
->>>>>>> Stashed changes
         Vector3 startPosition = transform.position;
         float elapsedTime = 0f;
 

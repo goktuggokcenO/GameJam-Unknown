@@ -10,21 +10,16 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 // Unstable control scripth
 public class UnstableControl : MonoBehaviour
 {
-<<<<<<< Updated upstream
-    public bool isUnstable = false;
-    public int whichUnstable;
-    public int scoreMax = 100;
-    public int scoreMin = 0;
-    public GameObject unstableControl; //unstable animation için
-    public GameObject unstableControl2; //unstable animation için
-    public GameObject unstableControl3; //unstable animation için
+    // Veriables for the animatin
+    public GameObject unstableControl;
+    public GameObject unstableControl2;
+    public GameObject unstableControl3;
 
-=======
+
     // Unstable controller veriables
     public bool isUnstable = false;       // Track the player is stable or not
     public int unstableCounter = 0;       // Unstable counter 
     public int unstableLimit = 10;        // Unstable limit for the effect
-    public GameObject unstableControl;    // Unstable control for animation
 
     private int unstableID;                // Unstable ID for the effects
     private int unstableCounterMin = 5;    // Minimum unstable counter increase
@@ -42,7 +37,7 @@ public class UnstableControl : MonoBehaviour
     private float unstableWalkTime = 3f; // Unstable walk effect time
 
     // Unstable walk effect
-    private IEnumerator unstableWalk()
+    public IEnumerator unstableWalk()
     {
         Debug.Log("Unstable Walk");
         unstableControl.SetActive(true);
@@ -59,7 +54,7 @@ public class UnstableControl : MonoBehaviour
     private float unstableDashTime = 3f;
 
     // Unstable dash effect
-    private IEnumerator unstableDash()
+    public IEnumerator UnstableDash()
     {
         Debug.Log("Unstable Dash");
         unstableControl.SetActive(true);
@@ -70,7 +65,6 @@ public class UnstableControl : MonoBehaviour
         isUnstable = false;
         unstableID = 0;
     }
->>>>>>> Stashed changes
 
 
     // Start is called before the first frame update
@@ -79,7 +73,6 @@ public class UnstableControl : MonoBehaviour
         unstableControl.SetActive(false);
         unstableControl2.SetActive(false);
         unstableControl3.SetActive(false);
-
     }
 
 
@@ -87,7 +80,8 @@ public class UnstableControl : MonoBehaviour
     void Update()
     {
         // Make the playre unstable
-        if (isUnstable == false && unstableCounter >= unstableLimit)
+        if (isUnstable == false 
+            && unstableCounter >= unstableLimit)
         {
             unstableCounter = 0;
             isUnstable = true;
@@ -105,57 +99,9 @@ public class UnstableControl : MonoBehaviour
 
                 // Unstable dash effect
                 case 2:
-                    StartCoroutine(unstableDash());
+                    StartCoroutine(UnstableDash());
                     break;
             }
         }
-<<<<<<< Updated upstream
-
-
-        //if (Input.GetKeyDown(KeyCode.LeftAlt))
-        //{
-        //    kills += Random.Range(scoreMin, scoreMax); ;
-        //}
-
-
-
-
-    }
-
-    private IEnumerator unstableWalk()
-    {
-        Debug.Log("unstable walk");
-        playerMovement.DisableControl();
-        unstableControl2.SetActive(true);
-        yield return new WaitForSecondsRealtime(3);
-        playerMovement.EnableControl();
-        unstableControl2.SetActive(false);
-        isUnstable = false;
-        whichUnstable = 0;
-        
-    }
-
-    private IEnumerator unstableDash()
-    {
-        Vector3 mousePosition = new Vector3(1, 1, 1);
-
-        Debug.Log("unstable dash");
-        playerMovement.Dash(mousePosition);
-        unstableControl3.SetActive(true);
-        isUnstable = false;
-        whichUnstable = 0;
-        yield return new WaitForSecondsRealtime(0.1f);
-        unstableControl3.SetActive(false);
-
-    }
-
-    private IEnumerator unstableFiring()
-    {
-        unstableControl.SetActive(true);
-        Debug.Log("unstable firing");
-        yield return new WaitForSecondsRealtime(3);
-        unstableControl.SetActive(false);
-=======
->>>>>>> Stashed changes
     }
 }
