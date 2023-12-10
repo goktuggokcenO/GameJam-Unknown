@@ -9,7 +9,6 @@ public class UnstableControl : MonoBehaviour
     public int whichUnstable;
     public int scoreMax = 100;
     public int scoreMin = 0;
-    private bool canBeUnstable = true;
     public GameObject unstableControl; //unstable animation için
 
     public PlayerMovement playerMovement;
@@ -18,7 +17,6 @@ public class UnstableControl : MonoBehaviour
     void Start()
     {
         unstableControl.SetActive(false);
-        canBeUnstable = false;
     }
 
     // Update is called once per frame
