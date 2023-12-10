@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour
     public Rigidbody2D rb;
     public float speed;
     public float detectionRange;
-    public Animator animator;
+    //public Animator animator;
 
     private float distance;
 
@@ -45,12 +45,12 @@ public class EnemyAI : MonoBehaviour
         {
             //rb.bodyType = RigidbodyType2D.Dynamic;
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-            animator.SetBool("isIdle", false);
+            //animator.SetBool("isIdle", false);
         }
         else
         {
             //rb.bodyType = RigidbodyType2D.Static;
-            animator.SetBool("isIdle", true);
+            //animator.SetBool("isIdle", true);
         }
     }
 }
