@@ -19,6 +19,8 @@ public class Shooting : MonoBehaviour
     private Vector3 mousePos;
     private float timer;
 
+    private bool isUnstableShoot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +49,7 @@ public class Shooting : MonoBehaviour
         }
 
         // Spawn the bullet object
-        if (Input.GetMouseButton(0) && canFire)
+        if (Input.GetMouseButton(0) && canFire && !isUnstableShoot)
         {
             animator.SetTrigger("isFiring");
             canFire = false;
