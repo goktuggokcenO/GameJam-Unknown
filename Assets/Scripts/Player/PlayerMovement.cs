@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public float dashCooldown = 2f;
 
     private bool isDashing = false;
+    private bool isDashEnabled = true;
     private float lastDashTime;
 
     // Start is called before the first frame update
@@ -62,7 +63,10 @@ public class PlayerMovement : MonoBehaviour
                 armSprite.transform.localScale = new Vector3(1, -1, 1);
             }
 
-            if (Input.GetMouseButtonDown(1) && !isDashing && Time.time - lastDashTime > dashCooldown)
+            if (Input.GetMouseButtonDown(1) 
+                && !isDashing 
+                && Time.time - lastDashTime > dashCooldown
+                && isDashEnabled)
             {
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 StartCoroutine(Dash(mousePosition));
@@ -74,7 +78,12 @@ public class PlayerMovement : MonoBehaviour
     public IEnumerator Dash(Vector3 targetPosition)
     {
         isDashing = true;
+<<<<<<< Updated upstream
         DashAnim.SetActive(true);
+=======
+
+
+>>>>>>> Stashed changes
         Vector3 startPosition = transform.position;
         float elapsedTime = 0f;
 
@@ -91,7 +100,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-
     // Speed limit for diagonal movement
     void FixedUpdate()
     {
@@ -104,11 +112,25 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(horizontal * moveSpeed, vertical * moveSpeed);
     }
 
+
+    // Prevent dahing
+    public void EnableDash()
+    {
+        isDashEnabled = true;
+    }
+
+    public void DisableDash()
+    {
+        isDashEnabled = false;
+    }
+
+
     // Stop the characer
     public void EnableControl()
     {
         isControlEnabled = true;
     }
+
     public void DisableControl()
     {
         isControlEnabled = false;
