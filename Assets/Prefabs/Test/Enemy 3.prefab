@@ -211,6 +211,7 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   score: {fileID: 0}
+  bloodStain: {fileID: 91491933969043356, guid: 475b07dcf2365834dbeeac2c0e44bc64, type: 3}
 --- !u!95 &4728494157156361289
 Animator:
   serializedVersion: 5

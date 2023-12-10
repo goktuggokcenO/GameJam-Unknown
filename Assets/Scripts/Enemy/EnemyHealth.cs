@@ -10,7 +10,9 @@ public class EnemyHealth : MonoBehaviour
     public float health;
     public float maxHealth;
     public Score score;
-
+    public GameObject bloodStain;
+    float horizontal, vertical;
+    Vector3 lastPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +23,13 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        horizontal = gameObject.transform.position.x;
+        vertical = gameObject.transform.position.y;
+
         if (health <= 0)
         {
+            lastPosition = gameObject.transform.position;
+            Instantiate(bloodStain, lastPosition, Quaternion.identity);
             Destroy(gameObject);
             score.KillEnemy();
         }
