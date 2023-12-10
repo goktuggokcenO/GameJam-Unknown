@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using System;
+using UnityEngine.Rendering;
 
 // Player controller
 public class PlayerMovement : MonoBehaviour
@@ -20,6 +21,12 @@ public class PlayerMovement : MonoBehaviour
     private float vertical;
     private float horizontal;
 
+    public float dashDistance = 5f;
+    public float dashDuration = 1f;
+    public float dashCooldown = 2f;
+
+    private bool isDashing = false;
+    private float lastDashTime;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
             horizontal = Input.GetAxisRaw("Horizontal");
             vertical = Input.GetAxisRaw("Vertical");
 
-            // Move the character
             Vector3 currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             animator.SetFloat("speed", Math.Abs(horizontal) + Math.Abs(vertical));
 
@@ -53,8 +59,35 @@ public class PlayerMovement : MonoBehaviour
                 playerSprite.transform.localScale = new Vector3(-1, 1, 1);
                 armSprite.transform.localScale = new Vector3(1, -1, 1);
             }
+
+            if (Input.GetMouseButtonDown(1) && !isDashing && Time.time - lastDashTime > dashCooldown)
+            {
+                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                StartCoroutine(Dash(mousePosition));
+                lastDashTime = Time.time;
+            }
         }
     }
+
+    IEnumerator Dash(Vector3 targetPosition)
+    {
+        isDashing = true;
+
+        Vector3 startPosition = transform.position;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < dashDuration)
+        {
+            transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / dashDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = targetPosition;
+        isDashing = false;
+    }
+
+
 
     // Speed limit for diagonal movement
     void FixedUpdate()
