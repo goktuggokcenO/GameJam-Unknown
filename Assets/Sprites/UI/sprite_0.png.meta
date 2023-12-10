@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ad70dfe37c9ee9346b3e9947ec52861f
+guid: 95aee7d833f54484ba4cfe1ea2dfa699
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,112 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: enemy_shooting_20x20_just_arms_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bce63fc661792a44ab3ad828dba943b
-      internalID: -1444609218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_shooting_20x20_just_arms_1
-      rect:
-        serializedVersion: 2
-        x: 20
-        y: 0
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b41e73c053125a4b9b3fef6eff253de
-      internalID: -1556232703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_shooting_20x20_just_arms_2
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 0
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3706e5534b6409419d973310e9406a9
-      internalID: 1877347984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_shooting_20x20_just_arms_3
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 0
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94cd801e3e8eca44a86efd1406404883
-      internalID: -2073292764
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_shooting_20x20_just_arms_4
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce698e383d8f66b40974dd29b09c75ec
-      internalID: -641801380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -224,12 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      enemy_shooting_20x20_just_arms_0: -1444609218
-      enemy_shooting_20x20_just_arms_1: -1556232703
-      enemy_shooting_20x20_just_arms_2: 1877347984
-      enemy_shooting_20x20_just_arms_3: -2073292764
-      enemy_shooting_20x20_just_arms_4: -641801380
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

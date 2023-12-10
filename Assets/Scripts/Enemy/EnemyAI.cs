@@ -38,13 +38,13 @@ public class EnemyAI : MonoBehaviour
         // Move the enemy to the player
         if (distance < detectionRange)
         {
-            rb.bodyType = RigidbodyType2D.Dynamic;
+            //rb.bodyType = RigidbodyType2D.Dynamic;
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
             animator.SetBool("isIdle", false);
         }
         else
         {
-            rb.bodyType = RigidbodyType2D.Static;
+            //rb.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isIdle", true);
         }
     }
