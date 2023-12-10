@@ -19,7 +19,8 @@ public class Score : MonoBehaviour
     void UpdateScoreText()
     {
         scoreText.text = "Score: "+ scoreValue.ToString();
-        Debug.Log(scoreText.text);      
+        Debug.Log(scoreText.text);
+        PlayerPrefs.SetInt("Score", scoreValue);
     }
 
     //when enemy died score will increase by 10
