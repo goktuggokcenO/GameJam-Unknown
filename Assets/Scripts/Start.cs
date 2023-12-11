@@ -7,6 +7,6 @@ public class Start : MonoBehaviour
 {
   public void StartGame()
     {
-        SceneManager.LoadSceneAsync("CutScene");
+        SceneManager.LoadSceneAsync("city2");
     }
 }

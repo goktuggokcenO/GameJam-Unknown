@@ -295,6 +295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 8644527584025762431, guid: edd8dc0fdc1083f48a34ce8035e2438a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9071647427367056129, guid: edd8dc0fdc1083f48a34ce8035e2438a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
